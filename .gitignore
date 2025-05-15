@@ -3,6 +3,7 @@
 composer.lock
 *.log
 error_log.txt
+config.php
 
 # Environment specific
 .env
