@@ -11,6 +11,7 @@
   <div class="container">
     <h1>Crosspoint YouTube Downloader</h1>
     <h3 class="disclaimer">For internal use only. Do not share this link.</h3>
+    <h3 class="disclaimer">Any issues please contact Fred</h3>
     <form id="downloadForm">
       <label for="youtube_url">YouTube URLs (maximum 5 URLs, one per line):</label>
       <textarea id="youtube_url" name="youtube_url" rows="5" placeholder="Enter YouTube links here (maximum 5 URLs, one per line)..." required></textarea>
