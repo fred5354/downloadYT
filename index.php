@@ -5,13 +5,22 @@
   <meta name="robots" content="noindex, nofollow">
   <meta name="googlebot" content="noindex, nofollow">
   <title>Crosspoint YouTube Downloader</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=<?php echo rand(1000,9999); ?>">
+  <style>
+    .logo-container {
+      text-align: center;
+      margin: 20px auto;
+      width: 200px;
+    }
+    .logo-container img {
+      width: 200px;
+      height: auto;
+    }
+  </style>
 </head>
 <body>
   <div class="container">
     <h1>Crosspoint YouTube Downloader</h1>
-    <h3 class="disclaimer">For internal use only. Do not share this link.</h3>
-    <h3 class="disclaimer">Any issues please contact Fred</h3>
     <form id="downloadForm">
       <label for="youtube_url">YouTube URLs (maximum 5 URLs, one per line):</label>
       <textarea id="youtube_url" name="youtube_url" rows="5" placeholder="Enter YouTube links here (maximum 5 URLs, one per line)..." required></textarea>
@@ -30,8 +39,12 @@
     </form>
 
     <div id="output" class="output-box"></div>
+    
   </div>
-
+  <h3 class="disclaimer">For internal use only. Do not share this link.</h3>
+  <div class="logo-container">
+    <img src="images/logo.png" alt="Crosspoint Church Logo">
+  </div>
   <script>
     let abortController = null;
     let downloadAborted = false;

@@ -26,3 +26,4 @@ ERROR: [youtube] lKw6uqtsdfd: Video unavailable
 [2025-05-15 20:15:16] URL: https://www.youtube.com/watch?v=1Gh90HUejv8 - Failed to update yt-dlp
 [2025-05-15 20:16:04] URL: https://www.youtube.com/watch?v=1Gh90HUejv8 - Failed to update yt-dlp
 [2025-05-15 20:17:46] URL: https://www.youtube.com/watch?v=1Gh90HUejv8 - Failed to update yt-dlp
+[2025-05-15 22:20:01] URL: disabled - Invalid YouTube URL

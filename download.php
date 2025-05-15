@@ -29,7 +29,7 @@ function logError($message, $url = '') {
         $headers = 'From: noreply@' . $_SERVER['HTTP_HOST'] . "\r\n" .
                   'X-Mailer: PHP/' . phpversion();
         
-        mail('fng@icloud.com', $subject, $emailBody, $headers);
+        mail('cd@crosspointchurchsv.org', $subject, $emailBody, $headers);
     }
 }
 
