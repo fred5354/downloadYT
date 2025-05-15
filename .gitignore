@@ -2,6 +2,7 @@
 /vendor/
 composer.lock
 *.log
+error_log.txt
 
 # Environment specific
 .env

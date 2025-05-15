@@ -1,3 +1,23 @@
+<?php
+require_once 'vendor/autoload.php';
+require_once 'config.php';
+
+session_start();
+
+// Check if user is logged in
+if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
+    $client = new Google_Client();
+    $client->setClientId(GOOGLE_CLIENT_ID);
+    $client->setClientSecret(GOOGLE_CLIENT_SECRET);
+    $client->setRedirectUri(GOOGLE_REDIRECT_URI);
+    $client->addScope('email');
+    $client->addScope('profile');
+    
+    $authUrl = $client->createAuthUrl();
+    header('Location: ' . $authUrl);
+    exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,10 +36,45 @@
       width: 200px;
       height: auto;
     }
+    .user-profile {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      margin-bottom: 20px;
+      gap: 10px;
+    }
+    .user-profile img {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+    }
+    .user-profile .greeting {
+      font-size: 14px;
+      color: #666;
+    }
+    .logout-btn {
+      background:none;
+      color: black;
+
+      border: 1px solid black;
+      padding: 5px 15px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+      text-decoration: none;
+    }
+    .logout-btn:hover {
+      background:rgb(107, 107, 107);
+    }
   </style>
 </head>
 <body>
   <div class="container">
+    <div class="user-profile">
+      <img src="<?php echo $_SESSION['picture'] ?? 'https://www.gravatar.com/avatar/?d=mp'; ?>" alt="Profile Picture">
+      <span class="greeting">Hi, <?php echo explode(' ', $_SESSION['user_name'])[0]; ?>!</span>
+      <a href="logout.php" class="logout-btn">Logout</a>
+    </div>
     <h1>Crosspoint YouTube Downloader</h1>
     <form id="downloadForm">
       <label for="youtube_url">YouTube URLs (maximum 5 URLs, one per line):</label>
@@ -145,6 +200,7 @@
       const urls = document.getElementById('youtube_url').value.split('\n').filter(url => url.trim());
       const format = document.getElementById('format').value;
       const outputBox = document.getElementById('output');
+      const downloadButton = document.getElementById('downloadButton');
       
       if (urls.length === 0) {
         outputBox.innerHTML = '<p class="error">Please enter at least one URL</p>';
@@ -156,9 +212,11 @@
         return;
       }
 
+      // Disable the download button and textarea during download
       downloadButton.disabled = true;
+      document.getElementById('youtube_url').disabled = true;
+      document.getElementById('format').disabled = true;
       downloadButton.textContent = 'Downloading...';
-      downloadButton.classList.add('disabled');
       toggleAbortButton(true);
 
       outputBox.innerHTML = '<div id="progress"></div>';
@@ -205,9 +263,11 @@
           progressDiv.innerHTML += `<p class="error">Unexpected error: ${error.message}</p>`;
         }
       } finally {
+        // Re-enable all form elements
         downloadButton.disabled = false;
+        document.getElementById('youtube_url').disabled = false;
+        document.getElementById('format').disabled = false;
         downloadButton.textContent = 'Download All';
-        downloadButton.classList.remove('disabled');
         toggleAbortButton(false);
         downloadAborted = false;
       }
