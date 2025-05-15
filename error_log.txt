@@ -1,0 +1,28 @@
+[2025-05-15 02:09:48] URL: https://youtu.be/lKw6uqtGFfo?si=vvz5Y5lx9y6CqZ7S - Failed to update yt-dlp
+[2025-05-15 02:14:18] URL: https://youtu.be/lKw6uqtxxxxxxxGFfo?si=vvz5Y5lx9y6CqZ7S - Failed to update yt-dlp
+[2025-05-15 02:14:19] URL: https://youtu.be/lKw6uqtxxxxxxxGFfo?si=vvz5Y5lx9y6CqZ7S - Download failed:
+[youtube] Extracting URL: https://youtu.be/lKw6uqtxxxxxxxGFfo?si=vvz5Y5lx9y6CqZ7S
+[youtube] lKw6uqtxxxx: Downloading webpage
+[youtube] lKw6uqtxxxx: Downloading ios player API JSON
+[youtube] lKw6uqtxxxx: Downloading mweb player API JSON
+ERROR: [youtube] lKw6uqtxxxx: Video unavailable
+[2025-05-15 02:16:04] URL: https://youtu.be/lKw6uqtsdfdsfsdfGFfo?si=vvz5Y5lx9y6CqZ7S - Failed to update yt-dlp
+[2025-05-15 02:16:05] URL: https://youtu.be/lKw6uqtsdfdsfsdfGFfo?si=vvz5Y5lx9y6CqZ7S - Download failed:
+[youtube] Extracting URL: https://youtu.be/lKw6uqtsdfdsfsdfGFfo?si=vvz5Y5lx9y6CqZ7S
+[youtube] lKw6uqtsdfd: Downloading webpage
+[youtube] lKw6uqtsdfd: Downloading ios player API JSON
+[youtube] lKw6uqtsdfd: Downloading mweb player API JSON
+ERROR: [youtube] lKw6uqtsdfd: Video unavailable
+[2025-05-15 19:48:35] URL: https://www.youtube.com/watch?v=6GGFb6LcX3U - Failed to update yt-dlp
+[2025-05-15 19:48:52] URL: https://www.youtube.com/watch?v=_n6dfB2Z-Ko - Failed to update yt-dlp
+[2025-05-15 19:52:48] URL: https://www.youtube.com/watch?v=_n6dfB2Z-Ko - Failed to update yt-dlp
+[2025-05-15 19:53:01] URL: https://www.youtube.com/watch?v=_n6dfB2Z-Ko - Failed to update yt-dlp
+[2025-05-15 19:53:14] URL: https://www.youtube.com/watch?v=_n6dfB2Z-Ko - Failed to update yt-dlp
+[2025-05-15 19:53:27] URL: https://www.youtube.com/watch?v=_n6dfB2Z-Ko - Failed to update yt-dlp
+[2025-05-15 19:53:41] URL: https://www.youtube.com/watch?v=_n6dfB2Z-Ko - Failed to update yt-dlp
+[2025-05-15 19:55:10] URL: https://www.youtube.com/watch?v=_n6dfB2Z-Ko - Failed to update yt-dlp
+[2025-05-15 19:56:39] URL: https://www.youtube.com/watch?v=_n6dfB2Z-Ko - Failed to update yt-dlp
+[2025-05-15 19:56:45] URL: https://www.youtube.com/watch?v=_n6dfB2Z-Ko - Failed to update yt-dlp
+[2025-05-15 20:15:16] URL: https://www.youtube.com/watch?v=1Gh90HUejv8 - Failed to update yt-dlp
+[2025-05-15 20:16:04] URL: https://www.youtube.com/watch?v=1Gh90HUejv8 - Failed to update yt-dlp
+[2025-05-15 20:17:46] URL: https://www.youtube.com/watch?v=1Gh90HUejv8 - Failed to update yt-dlp

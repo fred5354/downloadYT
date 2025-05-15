@@ -1,0 +1,28 @@
+# PHP specific
+/vendor/
+composer.lock
+*.log
+
+# Environment specific
+.env
+.env.*
+
+# System specific
+.DS_Store
+Thumbs.db
+
+# IDE specific
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Temporary files
+/temp/
+/tmp/
+*.tmp
+*.temp
+
+# Downloaded files
+*.mp3
+*.mp4 
