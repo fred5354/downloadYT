@@ -204,3 +204,42 @@ button[type="submit"]:hover:not(:disabled) {
     padding: 0;
 }
   
+.logo-container {
+    text-align: center;
+    margin: 20px auto;
+    width: 200px;
+  }
+  .logo-container img {
+    width: 200px;
+    height: auto;
+  }
+  .user-profile {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+    gap: 10px;
+  }
+  .user-profile img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+  }
+  .user-profile .greeting {
+    font-size: 14px;
+    color: #666;
+  }
+  .logout-btn {
+    background:none;
+    color: black;
+
+    border: 1px solid black;
+    padding: 5px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    text-decoration: none;
+  }
+  .logout-btn:hover {
+    background:rgb(107, 107, 107);
+  }

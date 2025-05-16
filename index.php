@@ -1,22 +1,26 @@
 <?php
-require_once 'vendor/autoload.php';
-require_once 'config.php';
 
-session_start();
 
-// Check if user is logged in
-if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
-    $client = new Google_Client();
-    $client->setClientId(GOOGLE_CLIENT_ID);
-    $client->setClientSecret(GOOGLE_CLIENT_SECRET);
-    $client->setRedirectUri(GOOGLE_REDIRECT_URI);
-    $client->addScope('email');
-    $client->addScope('profile');
+
+// require_once 'vendor/autoload.php';
+// require_once 'config.php';
+
+// session_start();
+
+
+// // Check if user is logged in
+// if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
+//     $client = new Google_Client();
+//     $client->setClientId(GOOGLE_CLIENT_ID);
+//     $client->setClientSecret(GOOGLE_CLIENT_SECRET);
+//     $client->setRedirectUri(GOOGLE_REDIRECT_URI);
+//     $client->addScope('email');
+//     $client->addScope('profile');
     
-    $authUrl = $client->createAuthUrl();
-    header('Location: ' . $authUrl);
-    exit;
-}
+//     $authUrl = $client->createAuthUrl();
+//     header('Location: ' . $authUrl);
+//     exit;
+// }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -27,54 +31,18 @@ if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
   <title>Crosspoint YouTube Downloader</title>
   <link rel="stylesheet" href="style.css?v=<?php echo rand(1000,9999); ?>">
   <style>
-    .logo-container {
-      text-align: center;
-      margin: 20px auto;
-      width: 200px;
-    }
-    .logo-container img {
-      width: 200px;
-      height: auto;
-    }
-    .user-profile {
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-      margin-bottom: 20px;
-      gap: 10px;
-    }
-    .user-profile img {
-      width: 32px;
-      height: 32px;
-      border-radius: 50%;
-    }
-    .user-profile .greeting {
-      font-size: 14px;
-      color: #666;
-    }
-    .logout-btn {
-      background:none;
-      color: black;
-
-      border: 1px solid black;
-      padding: 5px 15px;
-      border-radius: 4px;
-      cursor: pointer;
-      font-size: 14px;
-      text-decoration: none;
-    }
-    .logout-btn:hover {
-      background:rgb(107, 107, 107);
-    }
+  
   </style>
 </head>
 <body>
   <div class="container">
-    <div class="user-profile">
-      <img src="<?php echo $_SESSION['picture'] ?? 'https://www.gravatar.com/avatar/?d=mp'; ?>" alt="Profile Picture">
-      <span class="greeting">Hi, <?php echo explode(' ', $_SESSION['user_name'])[0]; ?>!</span>
+    <!-- <div class="user-profile">
+      <img src="<
+      ?php echo $_SESSION['picture'] ?? 'https://www.gravatar.com/avatar/?d=mp'; ?>" alt="Profile Picture">
+      <span class="greeting">Hi, <#?php echo explode(' ', $_SESSION['user_name'])[0]; ?>
+      !</span>
       <a href="logout.php" class="logout-btn">Logout</a>
-    </div>
+    </div> -->
     <h1>Crosspoint YouTube Downloader</h1>
     <form id="downloadForm">
       <label for="youtube_url">YouTube URLs (maximum 5 URLs, one per line):</label>
